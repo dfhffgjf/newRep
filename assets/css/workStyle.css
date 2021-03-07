@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.block {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat";
+}
+.block .block-content {
+  width: 70%;
+  margin: 0 auto;
+}
+.block .block-content .content-menu {
+  display: flex;
+  padding: 20px 70px;
+  font-weight: 500;
+  height: 80px;
+  background-color: #606060;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.block .block-content .content-menu .menu-choise {
+  width: 50%;
+}
+.block .block-content .content-menu .menu-choise .menu-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+}
+.block .block-content .content-menu .menu-choise .menu-list li {
+  padding: 7px 12px;
+  margin-right: 42px;
+  color: rgba(250, 250, 250, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.block .block-content .content-menu .menu-choise .menu-list li:after {
+  transition: 0.2s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  width: 0;
+  height: 2px;
+  background-color: #42AC6B;
+}
+.block .block-content .content-menu .menu-choise .menu-list li.active {
+  transition: 0s;
+  color: white;
+  border-radius: 6px;
+  background-color: #42AC6B;
+}
+.block .block-content .content-menu .menu-choise .menu-list li.active:after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #42AC6B;
+}
+.block .block-content .content-menu .menu-choise .menu-list li:last-child {
+  margin: 0;
+}
+.block .block-content .content-menu .menu-choise .menu-list li:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}
+.block .block-content .content-menu .menu-points {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.block .block-content .content-info {
+  background-size: cover;
+  width: 100%;
+  height: 340px;
+}
+.block .block-content .content-info .info-work {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  font-weight: 500;
+}
+.block .block-content .content-info .info-work.сarpenter {
+  background: url("../img/01.jpg") no-repeat;
+  background-size: cover;
+}
+.block .block-content .content-info .info-work.welder {
+  background: url("../img/02.jpg") no-repeat;
+  background-size: cover;
+}
+.block .block-content .content-info .info-work.hammer {
+  background: url("../img/03.jpg") no-repeat;
+  background-size: cover;
+}
+.block .block-content .content-info .info-work .work-discr {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 70px 0px 70px;
+}
+.block .block-content .content-info .info-work .work-discr .discr-title, .block .block-content .content-info .info-work .work-discr .discr-text, .block .block-content .content-info .info-work .work-discr .discr-lvl {
+  margin-bottom: 20px;
+}
+.block .block-content .content-info .info-work .work-discr .discr-btn button {
+  background-color: #42AC6B;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px 13px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.block .block-content .content-info .info-work .work-discr .discr-btn button:hover {
+  cursor: pointer;
+}
+.block .block-content .content-info .info-work .window-exit {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+.block .block-content .content-info .info-work .window-exit:after {
+  content: url("../img/exitBack.png");
+  position: absolute;
+  right: -15%;
+  bottom: -10px;
+  z-index: 0;
+  opacity: 0.6;
+}
+.block .block-content .content-info .info-work .window-exit button {
+  transition: 0.5s;
+  z-index: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 10px 10px 30px;
+  background-color: #AE1E1E;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  transform: scale(0.8);
+}
+.block .block-content .content-info .info-work .window-exit button:before {
+  content: url("../img/exitIcon.png");
+  position: absolute;
+  left: 5%;
+  top: 15%;
+}
+.block .block-content .content-info .info-work .window-exit button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  transform: scale(1);
+}
